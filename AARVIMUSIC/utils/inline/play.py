@@ -52,7 +52,7 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
         bar = "━━━━━━━━😍─"
     else:
         bar = "━━━━━━━━━😋"
-    buttons = [  
+    buttons = [         
         [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
@@ -66,7 +66,12 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
                 callback_data="GetTimer",
             )
         ],
-        [ InlineKeyboardButton(text="✰ ᴍᴀ፝֩֠֠֩sᴛɪ ᴋɪ ʙᴀ፝֠֩֠֩sᴛɪ ✰", url=f"https://t.me/+b1gc4qrvfLZlNGI1")],
+
+        [
+            InlineKeyboardButton(
+                text="✰ ᴍᴀ፝֩֠֠֩sᴛɪ ᴋɪ ʙᴀ፝֠֩֠֩sᴛɪ ✰", url=f"https://t.me/+b1gc4qrvfLZlNGI1"
+            ),          
+        ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
@@ -228,7 +233,12 @@ def stream_markup2(_, chat_id):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-        [ InlineKeyboardButton(text="✰ ᴍᴀ፝֩֠֠֩sᴛɪ ᴋɪ ʙᴀ፝֠֩֠֩sᴛɪ ✰", url=f"https://t.me/+b1gc4qrvfLZlNGI1")],
+        [
+            InlineKeyboardButton(
+                text="✰ ᴍᴀ፝֩֠֠֩sᴛɪ ᴋɪ ʙᴀ፝֠֩֠֩sᴛɪ ✰", url=f"https://t.me/+b1gc4qrvfLZlNGI1"
+            ),   
+        ],
+
         [
             InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
         ],
@@ -263,12 +273,7 @@ def stream_markup_timer2(_, chat_id, played, dur):
         bar = "━━━━━━━━━😋"
 
     buttons = [
-        [
-            InlineKeyboardButton(
-                text=f"{played} {bar} {dur}",
-                callback_data="GetTimer",
-            )
-        ],
+        
         [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
@@ -276,6 +281,19 @@ def stream_markup_timer2(_, chat_id, played, dur):
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
+        [
+            InlineKeyboardButton(
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="✰ ᴍᴀ፝֩֠֠֩sᴛɪ ᴋɪ ʙᴀ፝֠֩֠֩sᴛɪ ✰", url=f"https://t.me/+b1gc4qrvfLZlNGI1"
+            ),   
+        ],
+
+
         [
             InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
         ],
@@ -518,3 +536,4 @@ def panel_markup_clone(_, vidid, chat_id):
     ]
 
     return buttons
+
